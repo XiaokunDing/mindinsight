@@ -102,9 +102,10 @@ git clone https://gitee.com/mindspore/mindinsight.git
 执行如下命令：
 
 ```bash
-mindinsight start [--port PORT]
+mindinsight start [--host HOST] [--port PORT]
 ```
 
+*注：--host 参数默认值为127.0.0.1*
 *注：--port 参数默认值为8080*
 
 如果出现下列提示，说明安装成功：

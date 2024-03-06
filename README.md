@@ -103,9 +103,10 @@ You can choose any of the following installation methods:
 Execute the following command:
 
 ```bash
-mindinsight start [--port PORT]
+mindinsight start [--host HOST] [--port PORT]
 ```
 
+*notes: the param --host default value is 127.0.0.1*
 *notes: the param --port default value is 8080*
 
 If it prompts the following information, the installation is successful:

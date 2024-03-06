@@ -80,6 +80,22 @@ class PortAction(argparse.Action):
         setattr(namespace, self.dest, port)
 
 
+class HostAction(argparse.Action):
+    """Host action class definition."""
+
+    def __call__(self, parser, namespace, values, option_string=None):
+        """
+        Inherited __call__ method from argparse.Action.
+
+        Args:
+            parser (ArgumentParser): Passed-in argument parser.
+            namespace (Namespace): Namespace object to hold arguments.
+            values (object): Argument values with type depending on argument definition.
+            option_string (str): Optional string for specific argument name. Default: 127.0.0.1.
+        """
+        host = values
+        setattr(namespace, self.dest, host)
+
 class UrlPathPrefixAction(argparse.Action):
     """Url Path prefix action class definition."""
 
@@ -129,6 +145,14 @@ class Command(BaseCommand):
             help="""
                 Specify path for user workspace. Default is
                 $HOME/mindinsight.
+            """)
+
+        parser.add_argument(
+            '--host',
+            type=str,
+            action=HostAction,
+            help="""
+                Specify Host for user. Default is 127.0.0.1.
             """)
 
         parser.add_argument(

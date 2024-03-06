@@ -23,6 +23,7 @@ WORKSPACE = os.path.join(os.environ['HOME'], 'mindinsight')
 ####################################
 # Web default settings.
 ####################################
+HOST = '127.0.0.1'
 PORT = 8080
 URL_PATH_PREFIX = ''
 
